@@ -1,0 +1,33 @@
+<?php
+require("D:\AppServ\www\PHPMailer-master\PHPMailerAutoload.php");
+
+$frommail=$_POST['A1023343'];
+$subject=$_POST['subject'];
+$mailtext=$_POST['mailtext'];
+$tomail=$_POST['php@nuk.im'];
+
+//E-mail Message
+$mail = new PHPMailer();
+$mail->IsSMTP();
+$mail->SMTPDebug = 1;                          
+$mail->SMTPAuth = true;                      
+$mail->Host = "smtp.gmail.com";                 
+$mail->Port = 465;                            
+$mail->Username = "$A1023343";        
+$mail->From = "$frommail";
+$mail->FromName ="$username";
+$mail->IsHTML(true);
+$mail->Subject="$subject";
+$mail->AddAddress($php@nuk.im;
+$mail->AddAddress($php@nuk.im);
+//$mail->AddAddress('$tomail');
+$mail->CharSet = "utf-8";
+$message.="$mailtext";
+$mail->Body = "$message";
+$mail->Send();
+if(!$mail->Send()){  
+        echo "Error: " . $mail->ErrorInfo;  
+    }else{  
+        echo "<b>感謝您</b>";  
+    }  
+?>
