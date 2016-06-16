@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>CheckBox全選或取消</title> 
+<style type="text/css"> 
+p {margin:0;font-size:12px;line-height:26px;} 
+</style> 
+<script type="text/javascript"> 
+function check_all(obj,cName) 
+{ 
+    var checkboxs = document.getElementsByName(cName); 
+    for(var i=0;i<checkboxs.length;i++){checkboxs[i].checked = obj.checked;} 
+} 
+</script> 
+</head> 
+  
+<body> 
+<p><input type="checkbox" name="all" onclick="check_all(this,'c')" />全選</p> 
+<p><input type="checkbox" name="all" onclick="check_all(this,'c')" />取消</p> 
+<p>1.<input type="checkbox" name="c" value="desktop">桌子</p>
+<p>2.<input type="checkbox" name="c" value="chair" />椅子</p> 
+<p>3.<input type="checkbox" name="c" value="tv" />電視</p> 
+<p>4.<input type="checkbox" name="c" value="wash" />洗衣機</p> 
+<p>5.<input type="checkbox" name="c" value="kitchen" />廚房</p> 
+<p>6.<input type="checkbox" name="c" value="bathroom" />浴室</p> 
+</body> 
+</html>
